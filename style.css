@@ -3,7 +3,23 @@ body {
     padding: 50px;
     font-family: Arial, sans-serif;
     background-color: rgb(6, 3, 10);
+    z-index: 0;
+    position: relative;
 }
+body::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.ultrabrit.com/wp-content/uploads/2022/07/Billie-Eilish.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 15%;
+    z-index: -1;
+} 
 
 .navbar-content{
     display: flex;
@@ -19,7 +35,6 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     background-color: rgb(102, 24, 237);
-    border-radius: 10px;
     border: 2px solid rgb(179, 135, 254);
 }
 
@@ -60,6 +75,7 @@ p{
     color: rgb(240, 232, 255);
     font-size: 15px;
     text-align: center;
+    line-height: 20px;
 }
 
 .cantantesdelmomento{
@@ -80,7 +96,7 @@ h2{
 .bil {
     color: rgb(102, 24, 237);
     font-size: 20px;
-
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 } 
 
 .imgg img{
@@ -90,7 +106,8 @@ h2{
     border-width: 3px;
     border-style: solid;
     border-color: rgb(102, 24, 237);
-    
+    cursor: pointer;
+
 }
 
 td{
@@ -132,3 +149,11 @@ td{
 .cantantes-table tbody tr:hover{
     background-color: rgb(50, 12, 116);;
 }
+
+cursor{
+    pointer-events: stroke;
+} 
+
+.footer{
+    opacity: 50%;
+}   
